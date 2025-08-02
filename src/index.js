@@ -1,14 +1,14 @@
 "use strict";
 import "./styles.css";
 import { Player } from "./modules/factory";
+import { initiateDomGrid, grid1, grid2 } from "./modules/dom";
 
-const player = new Player("solid");
-player.board.placeShip(player.board.ships.carrier, 1, 1, "h");
+const player1 = new Player("solid");
+const player2 = new Player("solid");
+initiateDomGrid(grid1, player1);
+initiateDomGrid(grid2, player2);
+// player1.board.placeShip(player.board.ships.carrier, 1, 1, "h");
+// player1.board.receiveAttack(1, 1);
 
-player.board.receiveAttack(1, 1);
-player.board.receiveAttack(1, 2);
-player.board.receiveAttack(1, 3);
-player.board.receiveAttack(1, 4);
-player.board.receiveAttack(1, 5);
-
-console.log(player);
+export { player1, player2 };
+console.log(player1);

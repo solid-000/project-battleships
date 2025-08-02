@@ -92,6 +92,7 @@ function makeGrid() {
   for (let i = 1; i <= 10; i++) {
     for (let j = 1; j <= 10; j++) {
       res.set(JSON.stringify([i, j]), {
+        position: `${i},${j}`,
         occupied: false,
         neighbors: getNeighbors([i, j]),
         occupiedBy: 0,

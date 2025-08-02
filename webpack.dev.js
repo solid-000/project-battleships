@@ -1,5 +1,6 @@
 const { merge } = require("webpack-merge");
 const common = require("./webpack.common.js");
+const path = require("path");
 
 module.exports = merge(common, {
   mode: "development",
@@ -7,7 +8,11 @@ module.exports = merge(common, {
   devServer: {
     static: "./dist",
     watchFiles: ["./src/template.html"],
-    open: true,
+    open: {
+      app: {
+        name: path.join(process.env.HOME, "Applications/Google Chrome.app"),
+      },
+    },
     hot: true,
   },
 });

@@ -1,0 +1,42 @@
+*{
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+    outline: 1px solid red;
+}
+
+body{
+    height: 100vh;
+    display: grid;
+    grid-template: 50px 1fr 50px / 1fr;
+}
+
+.play-area, .sea{
+    display: flex;
+    justify-content: center;
+    padding: 10px 10px;
+}
+.sea{
+    height: 100%;
+    padding: 5px;
+    background-color: blue;
+    flex: 3;
+    gap: 20px;
+}
+.dock{
+    flex-basis: 200px;
+    /* display: none; */
+}
+.p1-grid, .p2-grid{
+    aspect-ratio: 1/1;
+    display: grid;
+    grid-template: repeat(10, 1fr) / repeat(10, 1fr);
+}
+.p2-grid{
+    display: none;
+}
+.mid{
+    flex-basis: 20px;
+    display: none;
+}
+
